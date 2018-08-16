@@ -1,9 +1,6 @@
 <div class="jumbotron">
   <h1 class="display-4">Eat-Da-Burger</h1>
-  <p class="lead"> INSERT DIRECTIONS FOR USING THE APP HERE....</p>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  <img src="../../public/assets/IMG/AvoBurger.jpg" alt="avocado burger">
 </div>
 
 <div class = "container">
@@ -14,11 +11,13 @@
     <h2>Burgers You Can Eatz!</h2>
 
 <ul>
+  <script id="entry-template" type="text/x-handlebars-template">
   {{#each burgers}}
     {{#unless devoured}} 
-      {{> burgers/burger-block devoured=false}}
+      {{> burger_name/burgerBlock devoured=false}}
     {{/unless}}
   {{/each}}
+  </script>
 </ul>
     </div>
     <div class="col-sm">
@@ -36,29 +35,16 @@
     <div class="col-sm">
         <h2>Burgers That Have Been Et.</h2>
      <ul>
+       <script id="entry-template" type="text/x-handlebars-template">
   {{#each burgers}}
     {{#if devoured}}
-      {{> burgers/burger-block devoured=true}
+      {{> burger_name/burgerBlock devoured=true}}
     {{/if}}
   {{/each}}
+  </script>
 </ul>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </div>
