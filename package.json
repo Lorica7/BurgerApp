@@ -1,0 +1,32 @@
+{
+  "name": "burgerapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lorica7/BurgerApp.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "javascript",
+    "handlebars",
+    "SQL",
+    "mysql"
+  ],
+  "author": "Danielle LaMorte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lorica7/BurgerApp/issues"
+  },
+  "homepage": "https://github.com/Lorica7/BurgerApp#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0"
+  }
+}
