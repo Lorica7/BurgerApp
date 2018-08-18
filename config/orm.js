@@ -43,8 +43,8 @@ var orm = {
       cb(result);
     });
   },
-  insertOne: function(table, cols, vals, cb) {
-    var queryString = "INSERT INTO " + table;
+  insertOne: function( cols, vals, cb) {
+    var queryString = "INSERT INTO burgers";
 
     queryString += " (";
     queryString += cols.toString();
@@ -64,8 +64,8 @@ var orm = {
     });
   },
  
-  updateOne: function(table, objColVals, condition, cb) {
-    var queryString = "UPDATE " + table;
+  updateOne: function( objColVals, condition, cb) {
+    var queryString = "UPDATE burgers";
 
     queryString += " SET ";
     queryString += objToSql(objColVals);

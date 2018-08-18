@@ -9,12 +9,12 @@ var burgers = {
   },
 
   insertOne: function (cols, vals, callback) {
-    orm.create("burgers", cols, vals, function (response) {
+    orm.insertOne(cols, vals, function (response) {
       callback(response);
     });
   },
   updateOne: function (objColVals, condition, callback) {
-    orm.update("burgers", objColVals, condition, function (response) {
+    orm.updateOne( objColVals, condition, function (response) {
       callback(response);
     });
   },
