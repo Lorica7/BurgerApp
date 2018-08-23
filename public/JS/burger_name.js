@@ -4,11 +4,11 @@ $(function () {
   $(".change-eaten").on("click", function (event) {
 
     event.preventDefault();
-    console.log('CLICKED!!!!!!');
+    console.log('Burger Eaten');
     var id = $(this).data("id");
-   var eaten = $(this).data("eaten");
+   console.log(this);
     var newState = {
-      devoured: eaten
+      devoured: true,
     };
 
     $.ajax("/api/burgers/" + id, {
@@ -16,8 +16,6 @@ $(function () {
       data: newState
     }).then(
       function () {
-        console.log("changed to", newState);
-        burgers.updateOne();
         location.reload();
         
       }
@@ -43,7 +41,7 @@ console.log(newBurger);
     }).then(
       function () {
         console.log("created new burger");
-        // burgers.insertOne();
+  
         location.reload();
       
       }

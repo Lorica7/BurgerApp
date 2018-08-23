@@ -15,13 +15,13 @@ router.get("/", function(request, response) {
 });
 
 router.post("/api/burgers", function(req, res) {
-  console.log(req);
+  console.log(req.body);
   burgers.insertOne([
     "burger_name", "devoured"
   ], [
-    req.body.burger_name, req.body.devoured
+    req.body.name, req.body.devoured
   ], function(result) {
-  console.log(result);
+ 
   res.json({ id: result.insertId });
   });
 });
@@ -30,9 +30,9 @@ router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   console.log("condition", condition);
-
+console.log(req.body);
   burgers.updateOne({
-    devoured: req.body.devoured
+    devoured: true
   }, condition, function(result) {
     if (result.changedRows == 0) {
   
@@ -41,7 +41,5 @@ router.put("/api/burgers/:id", function(req, res) {
     }
   });
 });
-
-
 
 module.exports = router;
